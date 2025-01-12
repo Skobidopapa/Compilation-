@@ -1,0 +1,280 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Console', monospace;
+}
+
+main {
+    padding: 20px;
+}
+
+#title-section {
+    position: relative;
+    text-align: center;
+    padding: 50px 20px;
+    color: black;
+    margin-top: 70px;
+}
+
+#title-section img {
+    display: block;
+    margin: -30px auto 15px auto; /* Move image up by setting a negative top margin */
+    max-width: 400px; /* Adjust the size */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: Add rounded corners */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.8); /* Darker shadow */
+    transition: box-shadow 0.3s ease-in-out; /* Smooth hover transition */
+}
+
+#title-section img:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1); /* Very dark and pronounced shadow on hover */
+}
+
+#title-section h2 {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+
+#title-section p {
+    font-size: 1.2em;
+}
+
+#essay {
+    position: relative; /* Ensure proper layering for the overlay */
+    padding: 25px; /* Comfortable padding */
+    background-image: url('assets/2essaybcg.jpeg'); /* Replace with your image URL */
+    background-size: cover; /* Ensure the image covers the entire section */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent tiling */
+    color: #333; /* Text color for readability */
+    max-width: 800px; /* Maintain readability */
+    margin: -30px auto 20px auto; /* Negative margin to move upward */
+    text-align: justify; /* Neat text alignment */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Subtle shadow */
+    border-radius: 10px; /* Slightly rounded corners */
+    line-height: 1.8; /* Enhance readability */
+    font-family: 'Georgia', serif; /* Classic and aesthetic font */
+    overflow: hidden; /* Prevent content spilling outside rounded corners */
+}
+
+#essay::before {
+    content: ''; /* Pseudo-element for overlay */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white overlay */
+    border-radius: 10px; /* Match the essay container's border radius */
+    z-index: -1; /* Place behind the content */
+}
+
+#essay h2 {
+    font-size: 1.8em; /* Larger heading for hierarchy */
+    color: #555; /* Subtle heading color */
+    text-align: center; /* Center the heading */
+    margin-bottom: 20px; /* Proper spacing */
+    font-weight: bold; /* Make the heading stand out */
+}
+
+#essay p {
+    font-size: 1.1em; /* Comfortable font size */
+    line-height: 1.8; /* Maintain line spacing */
+    margin-bottom: 15px; /* Space between paragraphs */
+}
+
+#essay hr {
+    border: 0;
+    height: 1px;
+    background-color: #ddd; /* Light gray divider */
+    margin: 20px 0;
+}
+
+@media (max-width: 768px) {
+    #essay {
+        padding: 20px; /* Adjust padding for smaller screens */
+        font-size: 0.9em; /* Reduce text size for better mobile experience */
+    }
+
+    #essay p {
+        line-height: 1.6; /* Adjust line height for compactness */
+    }
+}
+
+@media (width > 1024px) {
+
+  .service__grid {
+    gap: 2rem;
+  }
+}
+
+nav {
+    background-color: black;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 5px 0;  /* Reduced padding for a thinner nav */
+    height: 50px;  /* Set a specific height for the navigation bar */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    display: inline-block;
+    color: white;
+    padding: 10px 15px;  /* Reduced padding for thinner links */
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+nav ul li a:hover {
+    background-color: white;
+    color: black;
+}
+
+.banner {
+  overflow: hidden;
+}
+
+.banner__wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  animation: scroll 35s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%); /* Scroll the entire set of images */
+  }
+}
+
+.banner__wrapper:hover {
+  animation-play-state: paused;
+}
+
+.banner__card {
+  max-width: 300px; /* Set the card width */
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.banner__card img {
+  width: 100%; /* Fill the width of the card */
+  height: 200px; /* Set a consistent height */
+  object-fit: cover; /* Ensure the image is properly cropped */
+}
+
+footer {
+    background-color: #111;
+}
+
+.footerContainer {
+    width: 100%;
+    padding: 70px 30px 20px;
+}
+
+.socialIcons {
+    display: flex;
+    justify-content: center;
+}
+
+.socialIcons a {
+    text-decoration: none;
+    padding: 10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+}
+
+.socialIcons a i {
+    font-size: 2em;
+    color: black;
+    opacity: 0.9;
+}
+
+.socialIcons a:hover {
+    background-color: #111;
+    transition: 0.5s;
+}
+
+.socialIcons a:hover i {
+    color: white;
+    transition: 0.5s;
+}
+
+.footerNav {
+    margin: 30px 0;
+}
+
+.footerNav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.footerNav ul li a {
+    color: white;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+
+.footerNav ul li a:hover {
+    opacity: 1;
+}
+
+.footerBottom {
+    background-color: #000;
+    padding: 20px;
+    text-align: center;
+}
+
+.footerBottom p {
+    color: white;
+}
+
+.designer {
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}
+
+@media (max-width: 700px) {
+    .footerNav ul {
+        flex-direction: column;
+    }
+    
+    .footerNav ul li {
+        width: 100%;
+        text-align: center;
+        margin: 10px;
+    }
+    
+    .socialIcons a {
+        padding: 8px;
+        margin: 4px;
+    }
+}

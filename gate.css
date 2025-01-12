@@ -1,0 +1,130 @@
+@  (width > 1024px) {
+
+  .service__grid {
+
+    gap: 2rem;
+  }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', serif;
+}
+
+main {
+    padding: 20px;
+}
+
+nav {
+    background-color: black;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 5px 0;  /* Reduced padding for a thinner nav */
+    height: 50px;  /* Set a specific height for the navigation bar */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    display: inline-block;
+    color: white;
+    padding: 10px 15px;  /* Reduced padding for thinner links */
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+nav ul li a:hover {
+    background-color: white;
+    color: black;
+}
+
+#intro {
+    text-align: center;
+    padding: 20px;
+    margin-top: 70px; /* Adds space between navbar and the image */
+}
+
+.image-container img {
+    width: 100%;  /* Make the image responsive */
+    height: auto;  /* Keep the aspect ratio */
+    border-bottom: 2px solid #ddd; /* Optional border to separate the image and text */
+}
+
+#intro h1 {
+    font-size: 2.5em;
+    margin-top: 20px; /* Adds space between the image and the heading */
+}
+
+#intro p {
+    font-size: 1.8em;
+    margin-top: 10px; /* Adds space between the heading and the paragraph */
+}
+
+.service__grid {
+  margin-top: 4rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr; /* Stacks the cards vertically */
+}
+
+.service__card {
+  border-radius: 5px;
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  align-items: center; /* Center content horizontally */
+}
+
+.service__card:hover {
+  background-color: var(--extra-light);
+}
+
+.service__card img {
+  border-radius: 10px; /* Adjust the value to make the edges more or less rounded */
+  width: 90%; /* Adjust the width of the image */
+  max-width: 400px; /* Max width of the image */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: contain; /* Ensure the image fits within the box without stretching */
+  display: block; /* Ensures the image behaves like a block element */
+  margin: 0 auto; /* Centers the image horizontally */
+}
+
+.service__content {
+  padding: 1rem;
+  text-align: center; /* Center the content below the image */
+}
+
+.service__content h4 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-family: var(--header-font);
+  color: var(--text-dark);
+}
+
+.service__content p {
+  margin-bottom: 1rem;
+  color: var(--text-light);
+}
+
+.service__card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
